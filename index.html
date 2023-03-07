@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>GitFav</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <style>
-      body {
-        background-color: rgb(122, 115, 115);
-      }
-    </style>
     <div id="app">
       <header>
         <h1><img src="assets/GitFav.svg" alt="" /></h1>
         <div>
-          <label for="input-search">Usuário do Github</label>
+          <label class="sr-only" for="input-search">Usuário do Github</label>
           <input
             id="input-search"
             type="text"
             placeholder="Digite o Github username que quer favoritar"
           />
           <button>
-            <img src="assets/favoritar.svg" alt="" />
+          AAA <img src="" alt="" />
           </button>
         </div>
       </header>
-      <table></table>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Repositories</th>
+            <th>Followers</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="user">
+              <img
+                src="https://github.com/DaviF91.png"
+                alt="Foto de perfil do Davi"
+              />
+              <a href="https://github.com/DaviF91" target="_blank">
+                <p>Davi Ferreira</p>
+                <span>DaviF91</span>
+              </a>
+            </td>
+            <td class="repositories">50</td>
+            <td class="followers">100</td>
+            <td>
+              <button>Remover</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="user">
+              <img
+                src="https://github.com/diego3g.png"
+                alt="Foto de perfil do Davi"
+              />
+              <a href="https://github.com/diego3g" target="_blank">
+                <p>Diego Fernandes</p>
+                <span>diego3g</span>
+              </a>
+            </td>
+            <td class="repositories">50</td>
+            <td class="followers">100</td>
+            <td>
+              <button>Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
