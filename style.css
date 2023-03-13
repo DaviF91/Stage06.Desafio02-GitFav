@@ -12,6 +12,9 @@
   --text-color: #e1e1e6;
 
   --primary-color: hsla(194, 72%, 13%, 1);
+
+  --bg-table-odd-color: hsla(195, 61%, 6%, 0.5);
+  --bg-table-even-color: hsla(192, 65%, 7%, 1);
 }
 
 body {
@@ -24,26 +27,150 @@ body * {
   font-family: var(--ff-primary);
 }
 
-.sr-only{
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
 }
 
 #app {
   padding: 2rem;
-  max-width: 500px;
+  max-width: 112rem;
   margin: 0 auto;
 }
 
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  margin: 11.5rem 0 8.7rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search input {
+  width: 40rem;
+  height: 4.8rem;
+  border-radius: 0.5rem;
+  background-color: #06181c;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #7c7c8a;
+  padding: 1.6rem;
+}
+
+.search button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #065e7c;
+  border-radius: 5px;
+  border: none;
+  align-items: center;
+  padding: 12px 32px;
+  gap: 8px;
+  width: 17rem;
+  height: 4.8rem;
+  padding: 1.2rem 3.2rem;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.search button:hover {
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/*todos elementos da tabela */
+table * {
+  font-size: 2rem;
+  color: var(--text-color);
+
+}
+
+table th {
+  background-color: var(--primary-color);
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 1.5rem;
+
+  width: 110rem;
+  height: 6.4rem;
+}
+
+/* aplicar borda na tabela */
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+  
+}
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+/* odd = impares 
+   even = pares */
+table tr:nth-child(odd) {
+  background-color: var(--bg-table-odd-color);
+}
+table tr:nth-child(even) {
+  background-color: var(--bg-table-even-color);
+}
+
+
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+  height: 10.4rem;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: #f75a68;
+  cursor: pointer;
 }
