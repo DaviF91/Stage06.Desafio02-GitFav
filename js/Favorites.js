@@ -18,12 +18,18 @@ export class Favorites {
         followers: '120000'
       },
       {
-        login: 'ddd',
-        name: 'd',
+        login: 'maykbrito',
+        name: 'Mayk Brito',
         public_repos: '5',
         followers: '10'
       }
     ]
+  }
+
+  delete(user){
+    const filteredEntries = this.entries.filter(entry => entry.login !== user.login)
+    
+    this.entries = filteredEntries
   }
 }
 
@@ -45,6 +51,13 @@ export class FavoritesView extends Favorites {
       row.querySelector('.user span').textContent = user.login
       row.querySelector('.repositories').textContent = user.public_repos
       row.querySelector('.followers').textContent = user.followers
+
+      row.querySelector('.remove').onclick = () => {
+        const isOk = confirm('Tem certeza que deseja deleter esse usuário?')
+        if(isOk){
+          this.delete(user)
+        }
+      }
 
       this.tbody.append(row)
     })
