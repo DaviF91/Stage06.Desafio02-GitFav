@@ -15,7 +15,7 @@
 
 <p> Segundo desafio do stage 06 do programa <strong>Explorer</strong> da <a href="https://www.rocketseat.com.br/"> <strong>Rocketseat</strong></a>.<p>
 <p>Foi desenvolvido uma aplicação onde permite cadastrar os seus usuários favoritos do Github.
-Nesse desafio pude trabalhar com eventos no JavaScript, assincronismo, promises, conceitos de POO como calsses, herança e polimorfismo. Também pude trabalhar com conceitos sobre imutabilidade, tratar erros da aplicação utilizando métodos try, catch e throw, utilizar o localStorage e consumir API do Github.</p>
+Nesse desafio pude trabalhar com eventos no JavaScript, assincronismo, promises, conceitos de POO como classes, herança e polimorfismo. Também pude trabalhar com conceitos sobre imutabilidade, tratar erros da aplicação utilizando métodos try, catch e throw, utilizar o localStorage e consumir API do Github.</p>
 </br>
 
 <h2 align=left> 🧰​ Tecnologias</h2>
