@@ -150,8 +150,16 @@ td.user a {
 }
 
 td.user a p {
-  font-weight: bold;
+  font-weight:700;
+
 }
+
+td.user span{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
 
 td .remove {
   background: none;
